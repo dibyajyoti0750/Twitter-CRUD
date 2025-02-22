@@ -1,0 +1,46 @@
+<%- include("includes/header.ejs", {title: "Compose"}) %>
+
+<body>
+  <div class="compose-container">
+    <!-- Back Button -->
+    <a href="javascript:history.back()" class="compose-back-btn">
+      <i class="fa-solid fa-arrow-left"></i>
+    </a>
+
+    <h2 class="compose-title">Create a New Post</h2>
+
+    <form class="compose-form" action="/home" method="post">
+      <input
+        type="text"
+        name="name"
+        class="compose-input"
+        placeholder="Enter name"
+        required
+      />
+
+      <input
+        type="text"
+        name="username"
+        class="compose-input"
+        placeholder="Enter username"
+        required
+      />
+
+      <textarea
+        name="content"
+        class="compose-textarea"
+        placeholder="Write your post"
+        required
+      ></textarea>
+
+      <input
+        type="url"
+        name="image"
+        class="compose-input"
+        placeholder="Paste image URL"
+      />
+
+      <button type="submit" class="compose-submit-btn">Submit</button>
+    </form>
+  </div>
+</body>

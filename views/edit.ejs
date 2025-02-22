@@ -1,0 +1,26 @@
+<%- include("includes/header.ejs", {title: "Edit Post"}) %>
+
+<body>
+  <div class="edit-container">
+    <a href="javascript:history.back()" class="edit-back-btn">
+      <i class="fa-solid fa-arrow-left"></i>
+    </a>
+
+    <h2 class="edit-title">Edit Post</h2>
+
+    <form
+      class="edit-form"
+      action="/home/<%= post.id %>?_method=PATCH"
+      method="post"
+    >
+      <label for="edit-content" class="edit-label"
+        >Edit your post content:</label
+      >
+      <textarea id="edit-content" name="content" class="edit-textarea">
+<%= post.content %></textarea
+      >
+
+      <button type="submit" class="edit-update-btn">Update</button>
+    </form>
+  </div>
+</body>

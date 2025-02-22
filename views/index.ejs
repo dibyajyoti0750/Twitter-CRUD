@@ -1,0 +1,36 @@
+<%- include("includes/header.ejs", {title:"Home / X"}) %>
+<body>
+  <div class="col-1"></div>
+  <div class="col-2">
+    <h1>For you</h1>
+    <div id="create-post">
+      <a href="http://localhost:8080/home/compose" class="create-post"
+        >Create New Post</a
+      >
+    </div>
+    <% for(const post of posts) { %>
+    <div class="post">
+      <h3><%= post.name %></h3>
+      <p class="username">@<%= post.username %></p>
+      <p class="content"><%= post.content %></p>
+      <% if (post.image) { %>
+      <img src="<%= post.image %>" alt="image" />
+      <% } %>
+
+      <!-- Actions Section -->
+      <div class="actions">
+        <div>
+          <a href="http://localhost:8080/home/<%= post.id %>">Show Post</a>
+          <a href="http://localhost:8080/home/<%= post.id %>/edit">Edit</a>
+        </div>
+        <form method="post" action="/home/<%= post.id %>?_method=DELETE">
+          <button class="delete-btn">Delete</button>
+        </form>
+      </div>
+    </div>
+    <% } %>
+  </div>
+
+  <div class="col-3"></div>
+  <script src="/app.js"></script>
+</body>

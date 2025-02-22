@@ -1,0 +1,22 @@
+<%- include("includes/header.ejs", {title: `${post.username} on X:
+'${post.content}'` }) %>
+
+<body>
+  <div class="container">
+    <a href="javascript:history.back()" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i>
+    </a>
+
+    <h2>Post</h2>
+
+    <div class="post">
+      <h3><%= post.name %>'s Post</h3>
+      <p id="username">@<%= post.username %></p>
+      <p class="content"><%= post.content %></p>
+
+      <% if (post.image) { %>
+      <img src="<%= post.image %>" alt="Post Image" />
+      <% } %>
+    </div>
+  </div>
+</body>
