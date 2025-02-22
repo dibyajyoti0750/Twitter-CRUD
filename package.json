@@ -1,6 +1,7 @@
 {
   "name": "twitter-crud",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,11 +10,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "method-override": "^3.0.0",
     "uuid": "^11.1.0"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
