@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   margin: 15px 15px 0 15px;
   border-bottom: 4px solid #1d9bf0;
@@ -36,6 +36,7 @@ h1 {
 
 .col-2 {
   border: 1px solid #2f3336;
+  margin-bottom: 0.5rem;
 }
 
 .post {
@@ -47,7 +48,19 @@ h1 {
   cursor: pointer;
 }
 
-.post:hover {
+.show-post {
+  color: #fff;
+  border: 1px solid #2f3336;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 500px;
+  margin-bottom: 15px;
+  transition: background 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.post:hover,
+.show-post:hover {
   background-color: #111;
 }
 

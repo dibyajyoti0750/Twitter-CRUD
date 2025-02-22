@@ -5,7 +5,7 @@ const methodOverride = require("method-override");
 const { name } = require("ejs");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
