@@ -257,3 +257,66 @@ h2,
   outline: none;
   border-color: #1d9bf0;
 }
+
+/* For Responsiveness */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10px;
+}
+
+.col-1,
+.col-3 {
+  display: none;
+}
+
+.col-2 {
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #2f3336;
+}
+
+.post,
+.show-post,
+#create-post {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.compose-input,
+.compose-textarea,
+.edit-textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+.create-post,
+.edit-update-btn,
+.compose-submit-btn {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+  }
+  .col-1,
+  .col-3 {
+    display: block;
+    width: 25vw;
+  }
+  .col-2 {
+    max-width: 600px;
+  }
+}
