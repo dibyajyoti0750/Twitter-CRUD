@@ -13,12 +13,17 @@
       action="/home/<%= post.id %>?_method=PATCH"
       method="post"
     >
-      <label for="edit-content" class="edit-label"
-        >Edit your post content:</label
-      >
+      <label for="edit-content" class="edit-label">Edit your post:</label>
       <textarea id="edit-content" name="content" class="edit-textarea">
 <%= post.content %></textarea
       >
+
+      <input
+        type="url"
+        name="image"
+        class="compose-input"
+        value="<%= post.image %>"
+      />
 
       <button type="submit" class="edit-update-btn">Update</button>
     </form>

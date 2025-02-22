@@ -23,7 +23,7 @@ let posts = [
     content:
       "If you don't own a piece of a business, you don't have a path towards financial freedom.",
     image:
-      "https://images.unsplash.com/photo-1525095182007-3874c4e2b38b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.pexels.com/photos/4069292/pexels-photo-4069292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     id: uuidv4(),
@@ -133,8 +133,10 @@ app.get("/home/:id/edit", (req, res) => {
 app.patch("/home/:id", (req, res) => {
   let { id } = req.params;
   let newContent = req.body.content;
+  let newImage = req.body.image;
   let post = posts.find((post) => id === post.id);
   post.content = newContent;
+  post.image = newImage;
   res.redirect("/home");
 });
 
